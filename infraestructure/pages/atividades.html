@@ -5,25 +5,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="../assets/images/favicon.ico">
     <link rel="stylesheet" href="../assets/css/header.css">
     <link rel="stylesheet" href="../assets/css/accordion.css">
     <script src="../assets/js/header.js"></script>
-    <script src="../assets/js/accordion,js"></script>
+    <script src="../assets/js/accordion.js"></script>
+    
 </head>
 
 <body>
-    
     <main-header></main-header>
-    <br>
 
-    <div id="container">
-        <div class="accodion">
-            <button class="accodion"></button>
+    <main class="conteudo">
+        <h1>Desafios da aula</h1>
+        <p>
+            Essas são as atividades propostas pelo Classroom como desafios para aplicar conceitos abordados durante a aula.<br>
+            As datas de entrega podem ser verificadas pelos commits no GitHub.
+        </p>
+
+        <div id="container">
+
+             <!--Accordion 01-->
+
+            <div class="accordion">
+                <button class="accordion-header">
+                    <span>Atividade 01 - 23/04/2025 - Criando projeto</span>
+                    <i class="fa-solid fa-chevron-down arrow"></i>
+                </button>
+                <div class="accordion-body">
+                    <img src="../assets/images/Atividade 1.jpg" alt="">
+                    <p class="font-paragraph">
+                        Como diz a imagem, foi pedido para que fosse feita uma página HTML e a mesma fosse enviada para o GitHub.
+                        Como pode ser visto, isso foi feito no dia 25 de abril.
+                    </p>
+                </div>
+            </div>
+
+             <!--Accordion 02-->
+
+            <div class="accordion">
+                <button class="accordion-header">
+                    <span>Atividade 02 - 26/04/2025 - Criando a estrutura do projeto e favicon</span>
+                    <i class="fa-solid fa-chevron-down arrow"></i>
+                </button>
+                <div class="accordion-body">
+                    <img src="../assets/images/Atividade 2.jpg" alt="">
+                    <p class="font-paragraph">
+                        Como diz a imagem, foi pedido para que criasse uma estrutura para o projeto, segui as recomendações dos slides.
+                        Além disso, foi pedido um favicon, adicionei um generico. Isso foi feito no dia 29 de abril.
+                    </p>
+                </div>
+            </div>
+
+             <!--Accordion 03-->
+
+             <div class="accordion">
+                <button class="accordion-header">
+                    <span>Atividade 03 - 30/04/2025 - Links, listas e imagens</span>
+                    <i class="fa-solid fa-chevron-down arrow"></i>
+                </button>
+                <div class="accordion-body">
+                    <img src="../assets/images/Atividade 3.jpg" alt="">
+                    <p class="font-paragraph">
+                        Como diz a imagem, foi pedido para que se adicionassem links para outras páginas, listas e imagens no projeto.
+                        As páginas e listas estão no header adicionado; já as imagens estão no accordion. 
+                        Isso foi feito no dia 05 de maio.
+                    </p>
+                </div>
+            </div>
+
         </div>
-
-    </div>
-  
+    </main>
 </body>
+
 </html>
