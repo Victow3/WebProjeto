@@ -85,3 +85,19 @@ body {
     margin: 12px 12px 12px 12px;
     font-size: 16px;
 }
+
+/*Video do Youtube*/
+
+.youtube-video{
+    padding-top: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+/*Audio interno*/
+
+.audio-music{
+    padding-top: 15px;
+    display: block;
+    margin: 0 auto;
+}
