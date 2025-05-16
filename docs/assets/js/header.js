@@ -1,37 +1,4 @@
-class Header extends HTMLElement {
-  connectedCallback() {
-    this.innerHTML = `
-      <header>
-        <nav>
-          <a class="logo" href="index.html">Backloggd</a>
-
-          <div class="mobile-menu">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-          </div>
-
-          <ul class="nav-list">
-            <li><a href="index.html">Início</a></li>
-            <li><a href="about.html">Sobre</a></li>
-            <li><a href="contact.html">Contato</a></li>
-            <li><a href="atividades.html">Atividades</a></li>
-          </ul>
-        </nav>
-      </header>
-    `;
-
-    const mobileMenu = this.querySelector(".mobile-menu");
-    const navList = this.querySelector(".nav-list");
-    const navLinks = this.querySelectorAll(".nav-list li");
-
-    const mobileNavbar = new MobileNavbar(mobileMenu, navList, navLinks);
-    mobileNavbar.init();
-  }
-}
-
-customElements.define('main-header', Header);
-
+// 1. Primeiro define a classe MobileNavbar
 class MobileNavbar {
   constructor(mobileMenuElement, navListElement, navLinksNodeList) {
     this.mobileMenu = mobileMenuElement;
@@ -69,3 +36,38 @@ class MobileNavbar {
     return this;
   }
 }
+
+// 2. Depois define o componente Header, que usa o MobileNavbar
+class Header extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `
+      <header>
+        <nav>
+          <a class="logo" href="index.html">Backloggd</a>
+
+          <div class="mobile-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+
+          <ul class="nav-list">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="about.html">Sobre</a></li>
+            <li><a href="contact.html">Contato</a></li>
+            <li><a href="atividades.html">Atividades</a></li>
+          </ul>
+        </nav>
+      </header>
+    `;
+
+    const mobileMenu = this.querySelector(".mobile-menu");
+    const navList = this.querySelector(".nav-list");
+    const navLinks = this.querySelectorAll(".nav-list li");
+
+    const mobileNavbar = new MobileNavbar(mobileMenu, navList, navLinks);
+    mobileNavbar.init();
+  }
+}
+
+customElements.define("main-header", Header);
