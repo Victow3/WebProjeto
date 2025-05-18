@@ -30,12 +30,17 @@ nav{
     left: 0;
     width: 100%;
     z-index: 1000;
+    transition: top 0.3s ease-in-out;
+    top: 0;
+}
+
+nav.hide {
+  top: -100px;
 }
 
 main{
     margin-top: 8vh;
     background: url("/docs/assets/images/hamburger.png") no-repeat center center;
-    
 }
 
 .nav-list{

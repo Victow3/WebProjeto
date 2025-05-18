@@ -110,12 +110,14 @@ body {
     padding: 0 16px;
     max-width: 600px;
     width: 100%;
+    color: #fff;
 }
 
 .intro h1 {
     font-size: 2rem;
     font-weight: 600;
     margin-bottom: 8px;
+
 }
 
 .intro p {

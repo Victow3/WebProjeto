@@ -1,4 +1,3 @@
-// 1. Primeiro define a classe MobileNavbar
 class MobileNavbar {
   constructor(mobileMenuElement, navListElement, navLinksNodeList) {
     this.mobileMenu = mobileMenuElement;
@@ -37,7 +36,6 @@ class MobileNavbar {
   }
 }
 
-// 2. Depois define o componente Header, que usa o MobileNavbar
 class Header extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
@@ -64,9 +62,20 @@ class Header extends HTMLElement {
     const mobileMenu = this.querySelector(".mobile-menu");
     const navList = this.querySelector(".nav-list");
     const navLinks = this.querySelectorAll(".nav-list li");
-
     const mobileNavbar = new MobileNavbar(mobileMenu, navList, navLinks);
     mobileNavbar.init();
+
+    const nav = this.querySelector("nav");
+    let lastScrollY = window.scrollY;
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > lastScrollY) {
+        nav.classList.add("hide");
+      } else {
+        nav.classList.remove("hide");
+      }
+      lastScrollY = window.scrollY;
+    });
   }
 }
 
