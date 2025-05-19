@@ -41,7 +41,7 @@ class Header extends HTMLElement {
     this.innerHTML = `
       <header>
         <nav>
-          <a class="logo" href="index.html">Backloggd</a>
+          <a class="logo" href="index.html">PlaceHolder</a>
 
           <div class="mobile-menu">
             <div class="line1"></div>
@@ -52,7 +52,7 @@ class Header extends HTMLElement {
           <ul class="nav-list">
             <li><a href="index.html">Início</a></li>
             <li><a href="about.html">Sobre</a></li>
-            <li><a href="contact.html">Contato</a></li>
+            <li><a href="login.html">Login</a></li>
             <li><a href="atividades.html">Atividades</a></li>
           </ul>
         </nav>

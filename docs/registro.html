@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="icon" href="assets/images/favicon.ico"/>
+    <link rel="stylesheet" href="assets/css/general.css"/>
+    <link rel="stylesheet" href="assets/css/header.css"/>
+    <link rel="stylesheet" href="assets/css/registro.css">
+    <script src="assets/js/registro.js" defer></script>
+    <script src="assets/js/mobile-navbar.js" defer></script>
+    <script src="assets/js/header.js" defer></script>
+</head>
+
+<body>
+
+    <main-header></main-header>
+
+        <main class="container-registro">
+            <form id="registro-form" action="">
+            <h1>Registration</h1>
+
+                <div class="input-box">
+                    <input placeholder="Endereço de email" type="email" required>
+                </div>
+
+                <div class="input-box">
+                    <input id="nome" placeholder= "Nome" type="text" required>
+                    <small>Maximo de 16 caracteres</small>
+                </div>
+
+                <div class="input-box">
+                    <input placeholder= "Senha" type="password" required>
+                    <small>Minimo de 6 caracteres</small>
+                </div>
+
+                <div class="input-box">
+                    <input placeholder= "Confirmação de senha" type="password" required>
+                </div>
+
+                <div class="terms">
+                    <label>
+                        <input type="checkbox" required>
+                        Eu aceito os termos de serviços de politicas de privacidade.
+                    </label>   
+                </div>
+
+                <button type="submit">Registrar</button>
+
+                <div class="login-link">
+                    <p>Já tem uma conta? <a href="login.html">Entre</a></p>
+                </div>
+            </form>
+    </main>
+
+</body>
+
+</html>
