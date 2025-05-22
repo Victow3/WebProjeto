@@ -1,81 +1,36 @@
-class MobileNavbar {
-  constructor(mobileMenuElement, navListElement, navLinksNodeList) {
-    this.mobileMenu = mobileMenuElement;
-    this.navList = navListElement;
-    this.navLinks = navLinksNodeList;
-    this.activeClass = "active";
-
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick() {
-    this.navList.classList.toggle(this.activeClass);
-    this.mobileMenu.classList.toggle(this.activeClass);
-    this.animateLinks();
-  }
-
-  animateLinks() {
-    this.navLinks.forEach((link, index) => {
-      if (link.style.animation) {
-        link.style.animation = "";
-      } else {
-        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
-      }
-    });
-  }
-
-  addClickEvent() {
-    this.mobileMenu.addEventListener("click", this.handleClick);
-  }
-
-  init() {
-    if (this.mobileMenu) {
-      this.addClickEvent();
-    }
-    return this;
-  }
-}
-
 class Header extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-      <header>
-        <nav>
-          <a class="logo" href="index.html">PlaceHolder</a>
+<header class="container-fluid p-0">
+  <nav class="navbar navbar-expand-md navbar-dark bg-transparent p-0">
+    <div class="container p-0">
+      
+      <a class="navbar-brand col-md-4" href="index.html">Place Holder</a>
 
-          <div class="mobile-menu">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-          </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-          <ul class="nav-list">
-            <li><a href="index.html">Início</a></li>
-            <li><a href="about.html">Sobre</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="atividades.html">Atividades</a></li>
-          </ul>
-        </nav>
-      </header>
+      <div class="collapse navbar-collapse col-md-8" id="navbarCollapse">
+        <div class="d-flex w-100 justify-content-end gap-3">
+
+          <a href="login.html" class="btn text-white custom-btn-login">Login</a>
+
+          <form role="search">
+            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+            <button type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+  </nav>
+</header>
     `;
-
-    const mobileMenu = this.querySelector(".mobile-menu");
-    const navList = this.querySelector(".nav-list");
-    const navLinks = this.querySelectorAll(".nav-list li");
-    const mobileNavbar = new MobileNavbar(mobileMenu, navList, navLinks);
-    mobileNavbar.init();
-
-    const nav = this.querySelector("nav");
-    let lastScrollY = window.scrollY;
-
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > lastScrollY) {
-        nav.classList.add("hide");
-      } else {
-        nav.classList.remove("hide");
-      }
-      lastScrollY = window.scrollY;
-    });
   }
 }
 

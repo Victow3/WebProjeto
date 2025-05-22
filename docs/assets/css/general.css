@@ -1,10 +1,15 @@
 body{
-    background-color: #16181c;
+    background-color: #121216 !important;
 }
 
-@media screen and (max-width: 768px){
-    .main-header{
-        display: block;
+body, input, button, select, textarea {
+    font-family: 'Roboto', sans-serif !important;
+}
 
-    }
+.index-tittle-text-color{
+    color: #b0b0b0;
+}
+
+.index-container-text-color{
+    color: #b0b0b0;
 }

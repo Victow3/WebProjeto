@@ -3,80 +3,143 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Home</title>
-  <link rel="icon" href="assets/images/favicon.ico"/>
+  <link rel="icon" href="assets/images/favicon.ico" />
+  
+  <!-- ↓ Bootstrap CSS ↓ -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  
+  <!-- ↓ Seus estilos customizados ↓ -->
   <link rel="stylesheet" href="assets/css/general.css" />
   <link rel="stylesheet" href="assets/css/header.css" />
-  <link rel="stylesheet" href="assets/css/index.css" />
-  <script src="assets/js/mobile-navbar.js" defer></script>
+  <link rel="stylesheet" href="assets/css/footer.css" />
+  
+  <!-- ↓ FontAwesome ↓ -->
+  <link
+    rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  
+  <!-- ↓ Scripts ↓ -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/header.js" defer></script>
+  <script src="assets/js/footer.js" defer></script>
+
+  <!-- ↓ Fonts ↓ -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+
 </head>
 
 <body>
 
+  <!-- ↓ Header ↓ -->
+
   <main-header></main-header>
 
-  <div class="container">
-    <h1>O que é ...?</h1>
-    <p class="subtitle">
-      ... é um lugar para registrar virtualmente sua coleção de midias no geral.
+  <main>
+  <!-- ↓ Tittle Text ↓ -->
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="text-white fw-bold">
+          O que é ...?
+        </h2>
+
+        <p class="index-tittle-text-color">
+          ... é um lugar para registrar virtualmente sua coleção de midias no geral.
       Mantenha suas listas atualizadas, avalie suas mídias favoritas e adicione os próximos à sua lista de desejos.
-      Compartilhe suas listas com seus amigos, seguindo uns aos outros para se manterem atualizados sobre suas últimas novidades.
-    </p>
+      Compartilhe suas listas com seus amigos, seguindo uns aos outros para se manterem atualizados sobre suas últimas novidades.</p>
 
-    <div class="content">
-      <div class="games-grid">
-        <img src="assets/images/home-demo-collection.jpg" alt="Game cover" />
-      </div>
-      <div class="description">
-        <h2>Registre sua coleção pessoal</h2>
-        <p>
-          Registre todos os jogos que você já jogou, está jogando e quer jogar.
-          Seja tão detalhista quanto quiser com recursos como controle de tempo,
-          registro diário, plataforma e muito mais.
-        </p>
       </div>
     </div>
-
-    <div class="content">
-      <div class="description">
-        <h2>Compartilhe sua jornada com os amigos</h2>
-        <p>
-          Siga seus amigos, veja o que eles estão assistindo, lendo ou jogando e compartilhe experiências.
-          Com listas públicas e avaliações, você pode descobrir novas recomendações de quem você confia.
-        </p>
-      </div>
-      <div class="games-grid">
-        <img src="assets/images/home-demo-friends.jpg" alt="Friends gaming" />
-      </div>
-    </div>
-
-    <div class="content">
-      <div class="games-grid">
-        <img src="assets/images/home-demo-list.jpg" alt="Game list" />
-      </div>
-      <div class="description">
-        <h2>Monte listas personalizadas</h2>
-        <p>
-          Crie listas temáticas ou por gênero, organize seus favoritos e compartilhe com a comunidade.
-        </p>
-      </div>
-    </div>
-
-    <div class="content">
-      <div class="description">
-        <h2>Avalie e descubra</h2>
-        <p>
-          Leia avaliações de outros usuários, compartilhe sua opinião e descubra novos títulos com base no que você gosta.
-        </p>
-      </div>
-      <div class="games-grid">
-        <img src="assets/images/home-demo-reviews.jpg" alt="Reviews" />
-      </div>
-    </div>
-
   </div>
+
+  <!-- ↓ Container 1 ↓ -->
+
+  <div class="container mb-5">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="/docs/assets/images/home-demo-collection.jpg" alt="" class="img-fluid rounded">
+      </div>
+
+      <div class="col-md-6 d-flex flex-column justify-content-center">
+        <h3 class="text-white fw-bold">
+          Registre sua coleção pessoal
+        </h3>
+
+        <p class="index-container-text-color">Registre todos os jogos que você já jogou, está jogando e quer jogar.
+        Seja tão detalhista quanto quiser com recursos como controle de tempo,
+        registro diário, plataforma e muito mais.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ↓ Container 2 ↓-->
+
+  <div class="container mb-5">
+    <div class="row">
+      <div class="col-md-6 d-flex flex-column justify-content-center">
+
+        <h3 class="text-white fw-bold">
+          Compartilhe sua jornada com os amigos
+        </h3>
+        
+        <p class="index-container-text-color">Siga seus amigos, veja o que eles estão assistindo, lendo ou jogando e compartilhe experiências.
+        Com listas públicas e avaliações, você pode descobrir novas recomendações de quem você confia.</p>
+      </div>
+
+      <div class="col-md-6">
+        <img src="/docs/assets/images/home-demo-friends.jpg" alt="" class="img-fluid rounded">
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ↓ Container 3 ↓ -->
+
+  <div class="container mb-5">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="/docs/assets/images/home-demo-list.jpg" alt="" class="img-fluid rounded">
+      </div>
+
+      <div class="col-md-6 d-flex flex-column justify-content-center">
+        <h3 class="text-white fw-bold">
+          Monte listas personalizadas
+        </h3>
+
+        <p class="index-container-text-color">Crie listas temáticas ou por gênero, organize seus favoritos e compartilhe com a comunidade.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ↓ Container 4 ↓-->
+
+  <div class="container mb-5">
+    <div class="row">
+      <div class="col-md-6 d-flex flex-column justify-content-center">
+
+        <h3 class="text-white fw-bold">
+          Avalie e descubra
+        </h3>
+        
+        <p class="index-container-text-color">Leia avaliações de outros usuários, compartilhe sua opinião e descubra novos títulos com base no que você gosta.</p>
+      </div>
+
+      <div class="col-md-6">
+        <img src="/docs/assets/images/home-demo-reviews.jpg" alt="" class="img-fluid rounded">
+      </div>
+
+    </div>
+  </div>
+
+
+  </main>
+
+  <!-- ↓ Footer ↓ -->
+
+  <main-footer></main-footer>
 
 </body>
 </html>
