@@ -1,6 +1,5 @@
 class Header extends HTMLElement {
   connectedCallback() {
-    // 🔑 Pega usuário logado do localStorage
     const usuarioLogado = JSON.parse(localStorage.getItem("usuarioLogado"));
 
     this.innerHTML = `
@@ -15,10 +14,13 @@ class Header extends HTMLElement {
       <div class="collapse navbar-collapse col-md-8" id="navbarCollapse">
         <div class="d-flex w-100 justify-content-end gap-3 align-items-center">
           <a href="games.html" class="text-white text-decoration-none">Games</a>
-          
+
           ${usuarioLogado 
-            ? `<span class="text-white">Olá, ${usuarioLogado.nome}</span>
-               <button id="logoutBtn" class="btn btn-outline-light">Logout</button>` 
+            ? `<div class="logged-user d-flex align-items-center gap-2">
+                 <span class="text-white">Olá,</span>
+                 <a href="perfil.html" class="user-name-link text-decoration-none">${usuarioLogado.nome}</a>
+                 <button id="logoutBtn" class="btn btn-logout">Logout</button>
+               </div>` 
             : `<a href="login.html" class="btn text-white custom-btn-login">Login</a>`}
 
           <form id="searchForm" role="search" class="d-flex">
@@ -46,14 +48,13 @@ class Header extends HTMLElement {
         window.location.href = `games.html?search=${encodeURIComponent(nome)}`;
       });
 
-      // Busca em tempo real (opcional)
       let timeout;
       searchInput.addEventListener('input', () => {
         clearTimeout(timeout);
         timeout = setTimeout(() => {
           const nome = searchInput.value.trim();
           if (nome) {
-            // Aqui você poderia disparar busca dinâmica (se quisesse)
+            // Busca dinâmica opcional
           }
         }, 300);
       });
@@ -64,7 +65,7 @@ class Header extends HTMLElement {
     if (logoutBtn) {
       logoutBtn.addEventListener('click', () => {
         localStorage.removeItem("usuarioLogado");
-        window.location.reload(); // Atualiza header para mostrar botão de login
+        window.location.reload();
       });
     }
   }

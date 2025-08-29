@@ -1,4 +1,4 @@
-/* Reset básico */
+/* ===== Reset básico ===== */
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #121212;
@@ -11,85 +11,77 @@ a {
     text-decoration: none;
 }
 
-h1, h3, p {
+h1, h3, p, label {
     margin-bottom: 0.5rem;
 }
 
-/* Sidebar do jogo */
+/* ===== Sidebar do jogo ===== */
 #game-sidebar {
-    background: #1e1e1e;
-    padding: 1rem;
-    border-radius: 8px;
+    background-color: #1e1e1e;
+    padding: 1.5rem 1rem;
+    border-radius: 10px;
+    text-align: center;
 }
 
 #game-sidebar img {
-    max-width: 200px;
-    border-radius: 4px;
+    max-width: 220px;
+    border-radius: 6px;
     margin-bottom: 1rem;
 }
 
-/* Estrelas do rating */
+/* ===== Rating ===== */
 #star-rating i {
     font-size: 1.5rem;
     margin-right: 0.2rem;
+    color: #ff4da6; /* rosa */
 }
 
-/* Barras de rating */
 #rating-bars .progress {
     height: 12px;
     border-radius: 6px;
     background-color: #2a2a2a;
+    margin-bottom: 0.5rem;
 }
 
 #rating-bars .progress-bar {
-    background-color: #f5c518;
+    background-color: #ff4da6;
 }
 
-/* Botões de status */
+/* ===== Botões de status ===== */
+#status-buttons {
+    margin-top: 1rem;
+}
+
 #status-buttons button {
-    width: 100px;
-    border-radius: 4px;
+    width: 110px;
+    border-radius: 6px;
     font-weight: 500;
-}
-
-#btn-played {
-    background-color: #007bff;
+    margin: 0.3rem;
     color: #fff;
     border: none;
+    transition: 0.2s;
 }
 
-#btn-playing {
-    background-color: #28a745;
-    color: #fff;
-    border: none;
-}
-
-#btn-backlog {
-    background-color: #ffc107;
-    color: #000;
-    border: none;
-}
-
-#btn-wishlist {
-    background-color: #17a2b8;
-    color: #fff;
-    border: none;
-}
+#btn-played { background-color: #007bff; }
+#btn-playing { background-color: #28a745; }
+#btn-backlog { background-color: #ff4da6; color: #000; }
+#btn-wishlist { background-color: #17a2b8; }
 
 #status-buttons button:hover {
     opacity: 0.85;
 }
 
-/* Conteúdo principal */
+/* ===== Conteúdo principal ===== */
 #game-content {
     padding-left: 1rem;
 }
 
-/* Formulário */
+/* ===== Formulário de registro ===== */
 #perfilJogoForm {
     background-color: #1e1e1e;
-    padding: 1rem;
-    border-radius: 8px;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 1rem;
 }
 
 #perfilJogoForm input,
@@ -98,28 +90,34 @@ h1, h3, p {
     background-color: #2a2a2a;
     border: 1px solid #444;
     color: #fff;
+    border-radius: 6px;
+    padding: 0.5rem;
 }
 
 #perfilJogoForm input:focus,
 #perfilJogoForm select:focus,
 #perfilJogoForm textarea:focus {
-    border-color: #f5c518;
+    border-color: #ff4da6;
     outline: none;
 }
 
 /* Botão salvar */
 #perfilJogoForm button {
-    background-color: #f5c518;
+    background-color: #ff4da6;
     color: #000;
     font-weight: bold;
     border: none;
+    border-radius: 6px;
+    width: 100%;
+    padding: 0.5rem 0;
+    transition: 0.2s;
 }
 
 #perfilJogoForm button:hover {
     opacity: 0.9;
 }
 
-/* Responsividade */
+/* ===== Responsividade ===== */
 @media (max-width: 768px) {
     #game-sidebar, #game-content {
         padding-left: 0;
@@ -127,7 +125,13 @@ h1, h3, p {
     }
 
     #status-buttons button {
-        width: 45%;
+        width: 48%;
         margin-bottom: 0.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    #game-sidebar img {
+        max-width: 180px;
     }
 }
