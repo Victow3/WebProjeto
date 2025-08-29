@@ -1,5 +1,8 @@
 class Header extends HTMLElement {
   connectedCallback() {
+    // 🔑 Pega usuário logado do localStorage
+    const usuarioLogado = JSON.parse(localStorage.getItem("usuarioLogado"));
+
     this.innerHTML = `
 <header class="container-fluid p-0">
   <nav class="navbar navbar-expand-md navbar-dark bg-transparent p-0">
@@ -12,7 +15,12 @@ class Header extends HTMLElement {
       <div class="collapse navbar-collapse col-md-8" id="navbarCollapse">
         <div class="d-flex w-100 justify-content-end gap-3 align-items-center">
           <a href="games.html" class="text-white text-decoration-none">Games</a>
-          <a href="login.html" class="btn text-white custom-btn-login">Login</a>
+          
+          ${usuarioLogado 
+            ? `<span class="text-white">Olá, ${usuarioLogado.nome}</span>
+               <button id="logoutBtn" class="btn btn-outline-light">Logout</button>` 
+            : `<a href="login.html" class="btn text-white custom-btn-login">Login</a>`}
+
           <form id="searchForm" role="search" class="d-flex">
             <input id="searchInput" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-light" type="submit">
@@ -31,12 +39,10 @@ class Header extends HTMLElement {
     const searchInput = this.querySelector('#searchInput');
 
     if (searchForm && searchInput) {
-      searchForm.addEventListener('submit', async (e) => {
+      searchForm.addEventListener('submit', (e) => {
         e.preventDefault();
         const nome = searchInput.value.trim();
         if (!nome) return;
-
-        // Corrigido: query param deve ser "nome"
         window.location.href = `games.html?search=${encodeURIComponent(nome)}`;
       });
 
@@ -50,6 +56,15 @@ class Header extends HTMLElement {
             // Aqui você poderia disparar busca dinâmica (se quisesse)
           }
         }, 300);
+      });
+    }
+
+    // ===== Logout =====
+    const logoutBtn = this.querySelector('#logoutBtn');
+    if (logoutBtn) {
+      logoutBtn.addEventListener('click', () => {
+        localStorage.removeItem("usuarioLogado");
+        window.location.reload(); // Atualiza header para mostrar botão de login
       });
     }
   }

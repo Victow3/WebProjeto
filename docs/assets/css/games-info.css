@@ -1,0 +1,133 @@
+/* Reset básico */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1, h3, p {
+    margin-bottom: 0.5rem;
+}
+
+/* Sidebar do jogo */
+#game-sidebar {
+    background: #1e1e1e;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+#game-sidebar img {
+    max-width: 200px;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+/* Estrelas do rating */
+#star-rating i {
+    font-size: 1.5rem;
+    margin-right: 0.2rem;
+}
+
+/* Barras de rating */
+#rating-bars .progress {
+    height: 12px;
+    border-radius: 6px;
+    background-color: #2a2a2a;
+}
+
+#rating-bars .progress-bar {
+    background-color: #f5c518;
+}
+
+/* Botões de status */
+#status-buttons button {
+    width: 100px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+#btn-played {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+}
+
+#btn-playing {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+}
+
+#btn-backlog {
+    background-color: #ffc107;
+    color: #000;
+    border: none;
+}
+
+#btn-wishlist {
+    background-color: #17a2b8;
+    color: #fff;
+    border: none;
+}
+
+#status-buttons button:hover {
+    opacity: 0.85;
+}
+
+/* Conteúdo principal */
+#game-content {
+    padding-left: 1rem;
+}
+
+/* Formulário */
+#perfilJogoForm {
+    background-color: #1e1e1e;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+#perfilJogoForm input,
+#perfilJogoForm select,
+#perfilJogoForm textarea {
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    color: #fff;
+}
+
+#perfilJogoForm input:focus,
+#perfilJogoForm select:focus,
+#perfilJogoForm textarea:focus {
+    border-color: #f5c518;
+    outline: none;
+}
+
+/* Botão salvar */
+#perfilJogoForm button {
+    background-color: #f5c518;
+    color: #000;
+    font-weight: bold;
+    border: none;
+}
+
+#perfilJogoForm button:hover {
+    opacity: 0.9;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #game-sidebar, #game-content {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #status-buttons button {
+        width: 45%;
+        margin-bottom: 0.5rem;
+    }
+}

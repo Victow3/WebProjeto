@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Perfil do Usuário</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/docs/assets/js/perfil.js">
+</head>
+<body>
+<h2>Perfil do Usuário</h2>
+<p><strong>Nome:</strong> <span id="nome"></span></p>
+<p><strong>Email:</strong> <span id="email"></span></p>
+
+<h3>Jogos cadastrados</h3>
+<table border="1" width="100%">
+  <thead>
+    <tr>
+      <th>Nome do Jogo</th>
+      <th>Status</th>
+      <th>Horas Jogadas</th>
+      <th>Nota</th>
+      <th>Comentário</th>
+    </tr>
+  </thead>
+  <tbody id="lista-jogos">
+    <tr><td colspan="5">Carregando...</td></tr>
+  </tbody>
+</table>
+
+<button id="sair">Sair</button>
+
+<script src="/docs/assets/js/perfil.js"></script>
+
+</body>
+</html>
